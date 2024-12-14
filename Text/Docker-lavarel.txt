@@ -1,0 +1,31 @@
+Tạo 1 folder trống (Ví dụ folder Docker trong TH_MNM ổ đĩa E)
+Mở git Bash
+
+B1: cd Docker
+B2: git clone https://github.com/refactorian/laravel-docker.git
+B3: cd laravel-docker
+B4: docker compose up -d --build
+B5: docker compose exec phpmyadmin chmod 777 /sessions 
+(nếu chưa có folder sessions
+docker exec laravel-docker-phpmyadmin-1 sh -c "mkdir -p /sessions && chmod 777 /sessions")
+B6: docker compose exec php bash
+B7: chown -R www-data:www-data /var/www/storage /var/www/bootstrap/cache
+chmod -R 775 /var/www/storage /var/www/bootstrap/cache
+composer setup
+exit
+(Nếu chưa có composer
+docker compose exec php bash
+curl -sS https://getcomposer.org/installer | php
+mv composer.phar /usr/local/bin/composer
+composer --version)
+
+Lần sau khi vào -> Git bash -> cd Docker -> cd laravel-docker -> docker compose up -d
+
+Truy cập phpMyAdmin: localhost:8080
+	 Adminer   : localhost:9090
+DB_CONNECTION=mysql
+DB_HOST=db
+DB_PORT=3306
+DB_DATABASE=refactorian
+DB_USERNAME=refactorian
+DB_PASSWORD=refactorian

@@ -1,0 +1,30 @@
+Tạo repon trên GitHub
+
+Tạo repo local
+B1: mkdir webtest
+B2: cd webt
+B3 git init
+B4: git remote add origin https://github.com/PNXT0610/webt.git (git remote -v để kiểm tra)
+B5: Tạo file html trong webt (VSC)
+B6: git add .
+B7: git commit -m "Moi tao file html trong main"
+B8: git push -u origin main/master
+
+Tạo nhánh (git branch để kiểm tra nhánh)
+B1: git checkout -b nhanh2
+B2: git add .
+B3: Tạo file html trong webt (VSC)
+B4: git commit -m "Moi tao file html trong nhanh2"
+B5: git push -u origin nhanh2
+
+Gộp nhánh (Về nhánh chính trước mới gộp)
+B1: git checkout main
+B2: git merge nhanh2
+B3: git push origin main/master
+
+Clone (phải có folder tên tương tự tên repo trên local)
+B1: git clone https://github.com/PNXT0610/webt.git
+B2: 
+
+
+
